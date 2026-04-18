@@ -36,7 +36,8 @@ run: ## Run the project
 .PHONY: test
 test: ## Run unit tests
 	$(call title,"Running unit tests")
-	go test -race -coverprofile=coverage.txt -covermode=atomic ./...
+	# Using -count=1 to disable test caching for more reliable results
+	go test -count=1 -race -coverprofile=coverage.txt -covermode=atomic ./...
 
 .PHONY: integration
 integration: ## Run integration tests
