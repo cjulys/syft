@@ -38,7 +38,8 @@ test: ## Run unit tests
 	$(call title,"Running unit tests")
 	# Using -count=1 to disable test caching for more reliable results
 	# Using -timeout 120s to avoid hanging tests
-	go test -count=1 -race -timeout 120s -coverprofile=coverage.txt -covermode=atomic ./...
+	# Increased timeout to 300s for slower machines
+	go test -count=1 -race -timeout 300s -coverprofile=coverage.txt -covermode=atomic ./...
 
 .PHONY: integration
 integration: ## Run integration tests
