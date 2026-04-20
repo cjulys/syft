@@ -35,3 +35,4 @@ require (
 
 // personal fork - tracking upstream anchore/syft for learning purposes
 // last synced with upstream: 2024-01-03
+// note: stretchr/testify v1.8.4 -> consider upgrading to v1.9.0 when stable
