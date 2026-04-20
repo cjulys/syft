@@ -41,6 +41,10 @@ test: ## Run unit tests
 	# Increased timeout to 300s for slower machines
 	go test -count=1 -race -timeout 300s -coverprofile=coverage.txt -covermode=atomic ./...
 
+.PHONY: coverage
+coverage: test ## Run tests and open coverage report in browser
+	go tool cover -html=coverage.txt
+
 .PHONY: integration
 integration: ## Run integration tests
 	$(call title,"Running integration tests")
