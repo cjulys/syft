@@ -32,3 +32,6 @@ require (
 	golang.org/x/sys v0.18.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+// personal fork - tracking upstream anchore/syft for learning purposes
+// last synced with upstream: 2024-01-03
